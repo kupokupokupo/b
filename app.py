@@ -45,3 +45,11 @@ def handle_message(event):
 if __name__ == "__main__":
     port = int(os.environ.get('PORT', 5000))
     app.run(host='0.0.0.0', port=port)
+
+    # contoh chat
+            if 'halo' in msg.lower():
+                receiver.sendMessage('halo juga')
+            if 'hai' in msg.lower():
+                receiver.sendMessage('hai juga')                
+            if 'helo' in msg.lower():
+                receiver.sendMessage('helo juga')                
