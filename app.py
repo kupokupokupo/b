@@ -5,10 +5,13 @@ from linebot import (
     LineBotApi, WebhookHandler
 )
 from linebot.exceptions import (
-    InvalidSignatureError
+    InvalidSignatureError, LineBotApiError
 )
 from linebot.models import (
     MessageEvent, TextMessage, TextSendMessage,
+)
+from line import (
+    LineClient, LineGroup, LineContact
 )
 
 app = Flask(__name__)
@@ -32,6 +35,12 @@ def callback():
         abort(400)
 
     return 'OK'
+
+    #tes new faraaz--------------------------------------------------------------------------------
+    try:
+        line_bot_api.push_message('<to>', TextSendMessage(text='Hello World!'))
+    except LineBotApiError as e:
+    #tes new faraaz--------------------------------------------------------------------------------
 
 
 @handler.add(MessageEvent, message=TextMessage)
