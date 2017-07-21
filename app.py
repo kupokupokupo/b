@@ -37,9 +37,6 @@ def callback():
     return 'OK'
 
     #tes new faraaz--------------------------------------------------------------------------------
-    try:
-        line_bot_api.push_message('<to>', TextSendMessage(text='Hello World!'))
-    except LineBotApiError as e:
     #tes new faraaz--------------------------------------------------------------------------------
 
 
