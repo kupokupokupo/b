@@ -10,9 +10,9 @@ from linebot.exceptions import (
 from linebot.models import (
     MessageEvent, TextMessage, TextSendMessage,
 )
-from line import (
-    LineClient, LineGroup, LineContact
-)
+#from line import (
+#    LineClient, LineGroup, LineContact
+#)
 
 app = Flask(__name__)
 
