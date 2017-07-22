@@ -25,8 +25,12 @@ def callback():
     signature = request.headers['X-Line-Signature']
 
     # get request body as text
-    body = request.get_data(as_text=True)
-    app.logger.info("Request body: " + 'Hello World!')
+    #body = request.get_data(as_text=True)
+    #app.logger.info("Request body: ")
+    
+    # contoh chat
+    if 'halo' in msg.lower():
+    receiver.sendMessage('halo juga')
 
     # handle webhook body
     try:
