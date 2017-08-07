@@ -10,14 +10,11 @@ from linebot.exceptions import (
 from linebot.models import (
     MessageEvent, TextMessage, TextSendMessage,
 )
-#from line import (
-#    LineClient, LineGroup, LineContact
-#)
 
 app = Flask(__name__)
 
-line_bot_api = LineBotApi('MTn2latTZ4NmBnuah67007iRDPdliDVKkpxR1yb5IGpzTARdjzAqSnLmhkvew0EqfNs3wDSQuTc8j/DUfKCoPFpV3ECtur1KUxyiRd1jZjeS9JA7yJXlkuK6l6/WkCJEKDybBDiRMdFbYxtFlRYOmQdB04t89/1O/w1cDnyilFU=')
-handler = WebhookHandler('adbb3952c8bc75b90664aa5ededbbbec')
+line_bot_api = LineBotApi('Channel_Access_Token')
+handler = WebhookHandler('Channel_Secret')
 
 @app.route("/callback", methods=['POST'])
 def callback():
@@ -39,10 +36,6 @@ def callback():
         abort(400)
 
     return 'OK'
-
-    #tes new faraaz--------------------------------------------------------------------------------
-    #tes new faraaz--------------------------------------------------------------------------------
-
 
 @handler.add(MessageEvent, message=TextMessage)
 def handle_message(event):
